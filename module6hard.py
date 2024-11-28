@@ -1,9 +1,13 @@
 from Circle import Circle
+from Cube import Cube
 from Triangle import Triangle
 
 # Проверка работы
 circle = Circle((200, 200, 100), 10)
-triangle = Triangle((500, 220, 190), 10)
+print(circle.get_sides())
+triangle = Triangle((500, 220, 190), 11)
+print(triangle.get_sides())
+cube = Cube((123, 220, 250), 12, 2)
 
 # Проверка на изменение цветов:
 circle.set_color(55, 66, 707) 
@@ -16,10 +20,10 @@ print(triangle.get_color())
 circle.set_sides(3) 
 print(circle.get_sides())
 
-triangle.set_sides(3, 'd', 3) 
+triangle.set_sides(6) 
 print(triangle.get_sides())
 
 # Проверка периметра (круга), это и есть длина:
 
-print(len(circle))
-print(len(triangle))
+# print(len(circle))
+# print(len(triangle))

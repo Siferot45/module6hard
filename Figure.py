@@ -1,5 +1,3 @@
-from Circle import Circle
-
 
 class Figure:
     sides_count = 0
@@ -10,12 +8,17 @@ class Figure:
         self. filled = False
         
     def init_sides(self, *sides):
-        if len(sides) == self.sides_count:
+        
+        list_sides = [*sides[0]]
+
+        if len(list_sides) == self.sides_count:
             self.__sides = list(sides)
-        elif len(sides) == 1 and isinstance(self, not Circle):
-            self.__sides = sides * self.sides_count
+        elif len(list_sides) == 1:
+            self.__sides = list(sides[0]) * self.sides_count
         else:
-            pass
+            self.__sides = list(1) * self.sides_count
+    # else:
+    #     print("Unacceptable sides")
 
     def get_color(self):
         return self.__color
@@ -24,9 +27,11 @@ class Figure:
         new_rgb = []
         for element_rgb in [r, g, b]:
             if isinstance(element_rgb, int) and 0 <= element_rgb <= 255 :
-                    new_rgb.append(element_rgb)
+                new_rgb.append(element_rgb)
+                
         if len(new_rgb) == 3:
             return new_rgb
+
         
     def set_color(self, r, g, b):
         if self.__is_valid_color(r, g, b):
@@ -54,9 +59,8 @@ class Figure:
             
     def __len__(self):
         
-        u = list(self.__sides)
-        if (isinstance(x, int)  for x in u):
-            return sum(u)
+        if (isinstance(x, int)  for x in self.__sides):
+            return sum(self.__sides)
         else:
             print(self.__sides)
             print(type(self.__sides))
