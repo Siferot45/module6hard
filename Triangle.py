@@ -2,5 +2,7 @@ from Figure import Figure
 
 class Triangle(Figure):
     
-    def __init__(self, color, sides):
+    sides_count = 3
+
+    def __init__(self, color, *sides):
         super().__init__(color, sides)
