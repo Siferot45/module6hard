@@ -150,8 +150,9 @@ class Figure:
         Выводит:
             str: Сообщение об ошибке, если стороны некорректны.
         """
-        #if all(isinstance(x, int) for x in self.__sides):
-        sum_figure = sum(self.__sides)
-        return f'Сумма сторон фигуры: {sum_figure}'
-        # else:
-        #     print(self.__sides)
+        if all(isinstance(x, int) for x in self.__sides):
+            sum_figure = sum(self.__sides)
+            return sum_figure
+        
+        else:
+            print(self.__sides)

@@ -24,8 +24,9 @@ triangle.set_sides(3,4,5)
 print(triangle.get_sides())
 
 # Проверка периметра (круга), это и есть длина:
-
-print(len(circle))
-print(len(triangle))
+#e = len(triangle)
+#print(len(circle))
+            #return "Сумма сторон фигуры:", sum_figure
+print(len(triangle)
 print(cube.get_volume())
 print(triangle.get_square())
