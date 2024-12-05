@@ -27,6 +27,6 @@ print(triangle.get_sides())
 #e = len(triangle)
 #print(len(circle))
             #return "Сумма сторон фигуры:", sum_figure
-print(len(triangle)
+print(len(triangle))
 print(cube.get_volume())
 print(triangle.get_square())
